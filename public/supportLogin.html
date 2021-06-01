@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+​
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="Description" content="Enter your description here" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <link rel="stylesheet" href="../stylesheets/customerLogin.css">
+  <title>Login - Support| ATLAS </title>
+</head>
+
+<body>
+  <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+    <h2 class="navbar-brand brand-name">pic
+      <img src="../images/Pasted Graphic.png" width="80" height="60"></a>
+    </h2>
+    <div class="btn-group dropleft">
+     <button class="btn btn-white dropdown-toggle" type="button" id="dropdownMenu" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">
+        Customer
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenu">
+        <button class="dropdown-item" type="button"><a href="/">Home</a></button>
+        <button class="dropdown-item" type="button"><a href="/signupdriver">My Dashboard</a></button>
+      	<button class="dropdown-item" type="button"><a href="/signup">Sign Up</a></button>
+				<button class="dropdown-item" type="button"><a href="/login">Login</a></button>
+        <button class="dropdown-item" type="button">Contact Us</button>
+				<button class="dropdown-item" type="button"><a href="/logout">Logout</a></button>
+      </div>
+    </div>
+  </nav>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-12 col-md-offset-3">
+        <h2>Login Form</h2>
+        <form class="login">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="email-input" placeholder="Email">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="password-input" placeholder="Password">
+          </div>
+
+          <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+        <br />
+        <p><a href="/signup"> Or sign up here</a></p>
+      </div>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/customerLogin.js"></script>
+</body>
+
+</html>
