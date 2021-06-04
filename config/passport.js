@@ -11,7 +11,7 @@ passport.use("client",new LocalStrategy(
   },
   function(email, password, done) {
     // When a user tries to sign in this code runs
-    db.Customer.findOne({
+    db.Operations.findOne({
       where: {
         email: email
       }
@@ -45,7 +45,7 @@ passport.deserializeUser(function(obj, cb) {
   cb(null, obj);
 });
 
-passport.use("driver",new LocalStrategy(
+passport.use("support",new LocalStrategy(
   // Our user will sign in using an email, rather than a "username"
   {
     usernameField: "email"
