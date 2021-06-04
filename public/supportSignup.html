@@ -21,23 +21,26 @@
     
       body {
         font-family: 'Noto Sans SC', sans-serif;
-        background-image: url(../images/supportsignup.jpeg);
+        background-image: url("images/todo.jpeg");
         background-size: cover;
         background-repeat: no-repeat;
         opacity: 0.90;
 
-        /* .container {
-  width: 80%;
-  max-width: 800px;
+        .form-signup{
+
+          padding: 4em;
+	max-width: 200;
+	max-height: 400;
+  /* max-width: 800px;
   margin: 10px auto;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.7);
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 30px;
   -webkit-box-shadow: 0 0 10px #aaa;
-  box-shadow: 0 0 10px #aaa;
-} */
-      }
+  box-shadow: 0 0 10px #aaa; */
+} 
+    
 
       .glow {
   font-size: 60px;
@@ -78,16 +81,13 @@
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenu">
           <button class="dropdown-item" type="button"><a href="/">Home</a></button>
-          <button class="dropdown-item" type="button"><a href="/">My Dashboard</a></button>
-          <button class="dropdown-item" type="button"><a href="/signup">Sign Up</a></button>
           <button class="dropdown-item" type="button"><a href="/login">Login</a></button>
           <button class="dropdown-item" type="button">Contact Us</button>
-          <button class="dropdown-item" type="button"><a href="/logout">Logout</a></button>
         </div>
       </div>
     </nav>
 
-
+    <div class="form-signup">
     <div class="container mt-5">
       <form class="signup">
         <div class="form-row">
@@ -150,6 +150,7 @@
       <br />
       <p><a href="/login">Or log in here</a></p>
     </div>
+  </div>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script> -->
 
     <script
