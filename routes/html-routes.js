@@ -27,23 +27,6 @@ module.exports = function (app) {
   //   res.sendFile(path.join(__dirname, "../public/customerNewOrder.html"));
   // });
 
-
-  // app.get("/profile", isAuthenticated, function (req, res) {
-  //   res.sendFile(path.join(__dirname, "../public/customerProfile.html"));
-  // });
-
-
-  // app.get("/order", isAuthenticated, function (req, res) {
-  //   res.sendFile(path.join(__dirname, "../public/customerOrder.html"));
-  // });
-
-  // app.get("/existingOrder", isAuthenticated, function (req, res) {
-  //   res.sendFile(path.join(__dirname, "../public/customerExistingOrder.html"));
-  // });
-
-  // app.get("/track", isAuthenticated, function(req, res) {
-  //   res.sendFile(path.join(__dirname, "../public/customerOrderStatus.html"));   
-  })
     // Shivani's code - for serving orderstatus.html
   app.get("/orderStatus", isAuthenticated , function(req, res) {
     // If the user already has an account send them to the members page
@@ -77,20 +60,54 @@ module.exports = function (app) {
   //   res.sendFile(path.join(__dirname, "../public/driverLogin.html"));
   // });
   
-  app.get("/driverOrders", isAuthenticated , function(req, res) {
+  app.get("/opsDash", isAuthenticated , function(req, res) {
   
-    res.sendFile(path.join(__dirname, "../public/driverOrders.html"));
+    res.sendFile(path.join(__dirname, "../public/opsDash.html"));
   });
 
+  app.get("/opslogin", isAuthenticated , function(req, res) {
+  
+    res.sendFile(path.join(__dirname, "../public/opsLogin.html"));
+  });
+
+  app.get("/opsSignup", isAuthenticated , function(req, res) {
+  
+    res.sendFile(path.join(__dirname, "../public/opsSignup.html"));
+  });
+
+  app.get("/supportDash", isAuthenticated , function(req, res) {
+  
+    res.sendFile(path.join(__dirname, "../public/supportDash.html"));
+  });
+
+  app.get("/supportlogin", isAuthenticated , function(req, res) {
+  
+    res.sendFile(path.join(__dirname, "../public/supportLogin.html"));
+  });
+
+  app.get("/supportSignup", isAuthenticated , function(req, res) {
+  
+    res.sendFile(path.join(__dirname, "../public/supportSignup.html"));
+  });
+
+  app.get("/todo", isAuthenticated , function(req, res) {
+  
+    res.sendFile(path.join(__dirname, "../public/todo.html"));
+  });
+
+  app.get("/opsDash", isAuthenticated , function(req, res) {
+  
+    res.sendFile(path.join(__dirname, "../public/opsDash.html"));
+  });
    
-  app.get("/orderStatusDriver", isAuthenticated , function(req, res) {
+  // app.get("/orderStatusDriver", isAuthenticated , function(req, res) {
   
-    res.sendFile(path.join(__dirname, "../public/driverOrderStatus.html"));
-  });
+  //   res.sendFile(path.join(__dirname, "../public/driverOrderStatus.html"));
+  // });
   
-  app.get("/driverSelect", isAuthenticated , function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/driverOrderSelect.html"));
-  });
+  // app.get("/driverSelect", isAuthenticated , function(req, res) {
+  //   res.sendFile(path.join(__dirname, "../public/driverOrderSelect.html"));
+  // });
 
 
 

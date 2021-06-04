@@ -17,7 +17,7 @@
     
 body {
   font-family: 'Noto Sans SC', sans-serif;
-  background-image: url(../images/opssignin.jpeg);
+  background-image: url("images/todo.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   opacity: 0.90;
@@ -65,6 +65,25 @@ body {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
+
+.glow {
+  font-size: 60px;
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px rgb(192,192,192), 0 0 20px #fff, 0 0 30px #00c4e6, 0 0 40px #00c4e6, 0 0 50px #00c4e6, 0 0 60px #00c4e6, 0 0 70px #00c4e6;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #00c4e6, 0 0 40px #00c4e6, 0 0 50px #00c4e6, 0 0 60px #00c4e6, 0 0 70px #00c4e6, 0 0 80px #00c4e6;
+  }
+}
+
 </style>
 
 </head>
@@ -72,7 +91,7 @@ body {
 <body>
   <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
     <h2 class="navbar-brand brand-name">
-      <img src="../images/Pasted Graphic.png" width="80" height="60"></a>
+      <h1 class = "glow">ADU ATLAS</h1></a>
     </h2>
     <div class="btn-group dropleft">
       <button class="btn btn-white dropdown-toggle" type="button" id="dropdownMenu" data-toggle="dropdown"
@@ -91,12 +110,12 @@ body {
 
   <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="#">Client Packages</a>
-    <a href="#">Client Data</a>
-    <a href="#">Consistency Checks</a>
-    <a href="#">Markers</a>
-    <a href="#">Call API</a>
-    <a href="#">To Do List!</a>
+    <a href="/public/clientPack.html">Client Packages</a>
+    <a href="/public/clientData.html">Client Data</a>
+    <a href="/public/icc.html">Consistency Checks</a>
+    <a href="/public/markers.html">Markers</a>
+    <a href="/public/callApi.html">Call API</a>
+    <a href="/public/todo.html">To Do List!</a>
     <a href="#">JSON to CSV</a>
 
   </div>

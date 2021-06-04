@@ -38,6 +38,24 @@
   box-shadow: 0 0 10px #aaa;
 } */
       }
+
+      .glow {
+  font-size: 60px;
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px rgb(192,192,192), 0 0 20px #fff, 0 0 30px #00c4e6, 0 0 40px #00c4e6, 0 0 50px #00c4e6, 0 0 60px #00c4e6, 0 0 70px #00c4e6;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #00c4e6, 0 0 40px #00c4e6, 0 0 50px #00c4e6, 0 0 60px #00c4e6, 0 0 70px #00c4e6, 0 0 80px #00c4e6;
+  }
+}
       
         </style>
   </head>
@@ -45,7 +63,7 @@
   <body>
     <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
       <h2 class="navbar-brand brand-name">
-        <img src="../images/Pasted Graphic.png" width="80" height="60">ATLAS</a>
+        <h1 class = "glow">ADU ATLAS</h1></a>
       </h2>
       <div class="btn-group dropleft">
         <button

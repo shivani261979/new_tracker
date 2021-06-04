@@ -9,14 +9,46 @@
   <meta name="Description" content="Enter your description here" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-  <link rel="stylesheet" href="../stylesheets/driverLogin.css">
+  <link rel="stylesheet" href="../stylesheets/opsLogin.css">
   <title>Login - Operations | ATLAS</title>
+
+<style>
+  .glow {
+  font-size: 60px;
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px rgb(192,192,192), 0 0 20px #fff, 0 0 30px #00c4e6, 0 0 40px #00c4e6, 0 0 50px #00c4e6, 0 0 60px #00c4e6, 0 0 70px #00c4e6;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #00c4e6, 0 0 40px #00c4e6, 0 0 50px #00c4e6, 0 0 60px #00c4e6, 0 0 70px #00c4e6, 0 0 80px #00c4e6;
+  }
+}
+
+body {
+  font-family: 'Noto Sans SC', sans-serif;
+  /* background-color: rgba(255,255,255,0.1);
+background-blend-mode: lighten; */
+  background-image: url(../images/OperationsLoginBack.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+</style>
+
+
 </head>
 
 <body>
   <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
     <h2 class="navbar-brand brand-name">
-      <img src="../images/Pasted Graphic.png" width="80" height="60"></a>
+      <h1 class = "glow">ADU ATLAS</h1></a>
     </h2>
     <div class="btn-group dropleft">
       <button class="btn btn-white dropdown-toggle" type="button" id="dropdownMenu" data-toggle="dropdown"
@@ -50,7 +82,7 @@
           <button type="submit" class="btn btn-primary">Login</button>
         </form>
         <br />
-        <p><a href="/signupdriver">Or sign up here</a></p>
+        <p><a href="/public/opsSignup.html">Or sign up here</a></p>
       </div>
     </div>
   </div>

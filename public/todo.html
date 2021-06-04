@@ -30,7 +30,7 @@ ul li {
 }
 
 body {
-    background-image: url(../images/todo.jpeg);
+    background-image: url("images/todo.jpeg");
     background-size: cover;
   background-repeat: no-repeat;
   opacity: 0.90;
@@ -123,6 +123,31 @@ input {
 .addBtn:hover {
   background-color: #bbb;
 }
+
+.container {
+ /* border-radius: 25em; */
+ border-color: blue;
+ padding-top: 5em;
+
+}
+
+.glow {
+  font-size: 60px;
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px rgb(192,192,192), 0 0 20px #fff, 0 0 30px #00c4e6, 0 0 40px #00c4e6, 0 0 50px #00c4e6, 0 0 60px #00c4e6, 0 0 70px #00c4e6;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #00c4e6, 0 0 40px #00c4e6, 0 0 50px #00c4e6, 0 0 60px #00c4e6, 0 0 70px #00c4e6, 0 0 80px #00c4e6;
+  }
+}
 </style>
 
 </head>
@@ -130,7 +155,7 @@ input {
 <body>
   <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
     <h2 class="navbar-brand brand-name">
-      <img src="../images/Pasted Graphic.png" width="80" height="60"></a>
+      <h1 class = "glow">ADU ATLAS</h1></a>
     </h2>
     <div class="btn-group dropleft">
       <button class="btn btn-white dropdown-toggle" type="button" id="dropdownMenu" data-toggle="dropdown"
@@ -140,9 +165,6 @@ input {
       <div class="dropdown-menu" id="swapper-other1" aria-labelledby="dropdownMenu">
         <button class="dropdown-item" type="button"><a href="/">Home</a></button>
         <button class="dropdown-item" type="button"><a href="/signupdriver">My Dashboard</a></button>
-        <button class="dropdown-item" type="button"><a href="/signupdriver">Sign Up</a></button>
-				<button class="dropdown-item" type="button"><a href="/logindriver">Login</a></button>
-        <button class="dropdown-item" type="button"><a href="/driverOrders">Leave a Note!</a></button>
         <button class="dropdown-item" type="button">Contact Us</button>
 				<button class="dropdown-item" type="button"><a href="/logout">Logout</a></button>
 			</div>
@@ -154,6 +176,8 @@ input {
     <input type="text" id="myInput" placeholder="Title...">
     <span onclick="newElement()" class="addBtn">Add</span>
   </div>
+
+  <div class= "container">
   
   <ul id="myUL">
     <li>Check Price Indicator</li>
@@ -163,6 +187,8 @@ input {
     <li>Send Message to Check manual prices </li>
     <li>Leave a note to stacy before you Leave</li>
   </ul>
+
+</div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></scrip>
