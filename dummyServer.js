@@ -1,8 +1,8 @@
 // Requiring necessary npm packages
 var express = require("express");
-var session = require("express-session");
-// Requiring passport as we've configured it
-var passport = require("./config/passport");
+// var session = require("express-session");
+// // Requiring passport as we've configured it
+// var passport = require("./config/passport");
 
 // Setting up port and requiring models for syncing
 var PORT = process.env.PORT || 8080;
@@ -18,13 +18,13 @@ app.use(express.static('public'));
 
 
 // We need to use sessions to keep track of our user's login status
-app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
-app.use(passport.initialize());
-app.use(passport.session());
+// app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
+// app.use(passport.initialize());
+// app.use(passport.session());
 
 // Requiring our routes
 require("./routes/html-routes.js")(app);
-require("./routes/api-routes.js")(app);
+// require("./routes/api-routes.js")(app);
 
 
   // PA 06/03:  Commenting the CODE below because models/support.js has errors. uncomment this once that is fixed.

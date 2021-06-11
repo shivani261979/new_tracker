@@ -34,11 +34,11 @@ module.exports = function (sequelize, DataTypes) {
         state: DataTypes.STRING,
         zipcode: DataTypes.STRING,
         phone: DataTypes.STRING,
-        }
+        
     }, {
 
 
-        //  freezeTableName: true
+    //      freezeTableName: true
     });
     // Creating a custom method for our Customer model. This will check if an unhashed password entered by the user can be compared to the hashed password stored in our database
     Support.prototype.validPassword = function (password) {
@@ -59,4 +59,5 @@ module.exports = function (sequelize, DataTypes) {
         });
   
     };
-        return Support;
+    return Support;
+};

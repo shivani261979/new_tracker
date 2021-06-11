@@ -2,295 +2,378 @@
 <html lang="en">
 ​
 ​
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta name="Description" content="Enter your description here" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"> -->
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 	<link rel="stylesheet" href="./stylesheets/style.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
 	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script> -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-	<title>Home - Atlas</title>
-
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script> -->
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script> -->
+	<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"> </script>  -->
 
 	<style>
-		body{
+		/* body {
 			min-height: 100vh;
 			background-image: url("images/backgound.jpeg");
 			background-size: cover;
-  background-repeat: no-repeat;
-  opacity: 0.90;
-		}
+			background-repeat: no-repeat;
+			opacity: 0.90;
+		} */
+
 		/* For fully responsive Carousel*/
-		/* .carousel{
-			padding-top: 20px;
-			width:80%;
-			height: 400px;
-		} */
-		.carousel-inner img {
-		  	width: 100%;
-			  height: 80%;
-			  text-align: center;
-			/* position:absolute; */
-			
+
+		.carousel-container {
+
+			padding: 4em;
+			max-width: 200;
+			max-height: 400;
+
 		}
-		/* .carousel-item{
-			width:50%;
-			border: solid 1px gray;
-			height:90%;
-			margin:auto;
-		} */
-		.footer {
+
+		.carousel-inner{
 			position:relative;
+			text-align: center;
+			margin:auto;
+
+		}
+		.carousel-inner img {
+			width: 70%;
+			height: 80%;
+			/* position:absolute; */
+
+		}
+
+		.footer {
+			position: relative;
+			text-align: center;
+			width: 100%;
+			margin: auto;
 		}
 
 		.flip-card {
-  background-color: transparent;
-  width: 300px;
-  height: 300px;
-  perspective: 1000px;
-}
+			background-color: transparent;
+			width: 300px;
+			height: 300px;
+			perspective: 1000px;
+		}
 
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-}
+		.flip-card-inner {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			text-align: center;
+			transition: transform 0.6s;
+			transform-style: preserve-3d;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+		}
 
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-  transform: scale(1.05);
-  -webkit-box-shadow: 0 0 20px rgba(58, 23, 255, 0.8);
-          box-shadow: 0 0 20px rgba(58, 23, 255, 0.8);
-}
+		.flip-card:hover .flip-card-inner {
+			transform: rotateY(180deg);
+			/* transform: scale(1.05); */
+			-webkit-box-shadow: 0 0 20px rgba(58, 23, 255, 0.8);
+			box-shadow: 0 0 20px rgba(58, 23, 255, 0.8);
+		}
 
-.flip-card-front, .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
+		.flip-card-front,
+		.flip-card-back {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			-webkit-backface-visibility: hidden;
+			backface-visibility: hidden;
+		}
 
-.flip-card-front {
-  background-color: #bbb;
-  color: black;
-}
+		.flip-card-front {
+			background-color: #bbb;
+			color: black;
+		}
 
-.flip-card-back {
-  background-color: #2980b9;
-  color: white;
-  transform: rotateY(180deg);
-}
+		.flip-card-back {
+			background-color: #2980b9;
+			color: white;
+			transform: rotateY(180deg);
+		}
 
-/* .flip-card{
+		/* .flip-card{
   -webkit-box-shadow: 0 0 10px rgba(100,100,100,0.4);
           box-shadow: 0 0 10px rgba(100,100,100,0.4);
   margin: 25px;
   transition: all .2s ease-in-out;
   border-radius: 10px;
 } */
-/* .MyCard:hover{
+		/* .MyCard:hover{
   transform: scale(1.05);
   -webkit-box-shadow: 0 0 20px rgba(58, 23, 255, 0.8);
           box-shadow: 0 0 20px rgba(58, 23, 255, 0.8);
 } */
 
-.card-container{
+		.card-container {
 
 
-	padding: 4em;
-	max-width: 200;
-	max-height: 400;
+			padding: 4em;
+			max-width: 200;
+			max-height: 400;
 
 
-}
+		}
 
-.glow {
-  font-size: 60px;
-  color: #fff;
-  text-align: center;
-  -webkit-animation: glow 1s ease-in-out infinite alternate;
-  -moz-animation: glow 1s ease-in-out infinite alternate;
-  animation: glow 1s ease-in-out infinite alternate;
-}
+		.jumbotron {
 
-@-webkit-keyframes glow {
-  from {
-    text-shadow: 0 0 10px rgb(192,192,192), 0 0 20px #fff, 0 0 30px #00c4e6, 0 0 40px #00c4e6, 0 0 50px #00c4e6, 0 0 60px #00c4e6, 0 0 70px #00c4e6;
-  }
-  to {
-    text-shadow: 0 0 20px #fff, 0 0 30px #00c4e6, 0 0 40px #00c4e6, 0 0 50px #00c4e6, 0 0 60px #00c4e6, 0 0 70px #00c4e6, 0 0 80px #00c4e6;
-  }
-}
+			padding: 4em;
+			max-width: 200;
+			max-height: 400;
+		}
 
-.carousel-container {
+		#h1 {
 
-	padding: 4em;
-	max-width: 200;
-	max-height: 400;
+			text-align: left;
+		}
 
-}
+		.glow {
+			font-size: 60px;
+			color: #fff;
+			text-align: center;
+			-webkit-animation: glow 1s ease-in-out infinite alternate;
+			-moz-animation: glow 1s ease-in-out infinite alternate;
+			animation: glow 1s ease-in-out infinite alternate;
+		}
 
- 
+		@-webkit-keyframes glow {
+			from {
+				text-shadow: 0 0 10px rgb(192, 192, 192), 0 0 20px #fff, 0 0 30px #0077e6, 0 0 40px #0077e6, 0 0 50px #0077e6, 0 0 60px #0077e6, 0 0 70px #0077e6;
+			}
 
-		</style>
+			to {
+				text-shadow: 0 0 20px #fff, 0 0 30px #0077e6, 0 0 40px #0077e6, 0 0 50px #0077e6, 0 0 60px #0077e6, 0 0 70px #0077e6, 0 0 80px #0077e6;
+			}
+		}
+
+
+		#particle {
+			background-color: rgba(0, 0, 0, 1);
+			position: fixed;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			z-index: 0;
+			opacity: 1
+		}
+
+		#jumbo {
+			background: rgba(200, 54, 54, .5);
+			color: rgba(255, 255, 255);
+			position: relative;
+			padding: 50px;
+		}
+
+		.inner {
+			color: rgb(250, 250, 250);
+			opacity: 1;
+		}
+
+		body {
+			padding-top: 5px;
+		}
+	</style>
+
+	<title>Home - Atlas</title>
+
 </head>
 ​
-​
 <body>
-	<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+
+	<div id="particle"></div>
+
+	<nav class="navbar navbar-light" style="background-color: #e3f2fd;z-index:1;">
 		<h2 class="navbar-brand brand-name">
-			<h1 class = "glow">ADU ATLAS</h1></a>
+			<h1 class="glow">ADU ATLAS</h1></a>
 		</h2>
 
 		<div class="btn-group dropleft">
 			<div class="dropdown">
-		  <button class="btn btn-white dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
-			aria-haspopup="true" aria-expanded="false">
-			Operations
-		  </button>
-		  <div class="dropdown-menu" id="swapper-first1" aria-labelledby="dropdownMenu">
-			<button class="dropdown-item" type="button"><a href="/signup">Sign Up</a></button>
-			<button class="dropdown-item" type="button"><a href="/login">Login</a></button>
-			<!-- <button class="dropdown-item" type="button"><a href="/logout">Logout</a></button> -->
-			<button class="dropdown-item" type="button">Contact Us</button>
-		  </div>
-		</div>
-		<div class="btn-group dropleft">
-		  <button class="btn btn-white dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown"
-			aria-haspopup="true" aria-expanded="false">
-			Support
-		  </button>
-		  <div class="dropdown-menu" id="swapper-other1" aria-labelledby="dropdownMenu">
-			<button class="dropdown-item" type="button"><a href="/signupdriver">Sign Up</a></button>
-			<button class="dropdown-item" type="button"><a href="/logindriver">Login</a></button>
-			<!-- <button class="dropdown-item" type="button"><a href="/logout">Logout</a></button> -->
-			<button class="dropdown-item" type="button">Contact Us</button>
-		  </div>
-		</div>
-		<button class="btn btn-white btn-outline-info"><a href="javascript:SwapDivsWithClick('dropdownMenu1','dropdownMenu2')"> Switch Account Type</a></button>
-		</div>
-		</nav>
-
-         <div class="carousel-container">
-		<div id="demo" class="carousel slide" data-ride="carousel">
-			<ul class="carousel-indicators">
-			  <li data-target="#demo" data-slide-to="0" class="active"></li>
-			  <li data-target="#demo" data-slide-to="1"></li>
-			  <li data-target="#demo" data-slide-to="2"></li>
-			</ul>
-			<div class="carousel-inner">
-			  <div class="carousel-item active">
-				<img src="images/supportlogin.jpeg" alt="Los Angeles" width="400" height="200">
-				<div class="carousel-caption">
-				  <h3>ATLAS </h3>
-				  <p>Can run API calls for you!</p>
-				</div>   
-			  </div>
-			  <div class="carousel-item">
-				<img src="images/supportsignup.jpeg" alt="Chicago" width="800" height="400">
-				<div class="carousel-caption">
-				  <h3>ATLAS</h3>
-				  <p>Can Track Client Deliverables for you!</p>
-				</div>   
-			  </div>
-			  <div class="carousel-item">
-				<img src="images/supportlogin.jpeg" alt="New York" width="800" height="400">
-				<div class="carousel-caption">
-				  <h3>ATLAS</h3>
-				  <p>Can convert your JSON to csv/xls</p>
-				</div>   
-			  </div>
+				<button class="btn btn-white dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+					aria-haspopup="true" aria-expanded="false">
+					Operations
+				</button>
+				<div class="dropdown-menu" id="swapper-first1" aria-labelledby="dropdownMenu">
+					<button class="dropdown-item" type="button"><a href="/signup">Sign Up</a></button>
+					<button class="dropdown-item" type="button"><a href="/login">Login</a></button>
+					<!-- <button class="dropdown-item" type="button"><a href="/logout">Logout</a></button> -->
+					<button class="dropdown-item" type="button">Contact Us</button>
+				</div>
 			</div>
-			<a class="carousel-control-prev" href="#demo" data-slide="prev">
-			  <span class="carousel-control-prev-icon"></span>
-			</a>
-			<a class="carousel-control-next" href="#demo" data-slide="next">
-			  <span class="carousel-control-next-icon"></span>
-			</a>
-		  </div>
+			<div class="btn-group dropleft">
+				<button class="btn btn-white dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown"
+					aria-haspopup="true" aria-expanded="false">
+					Support
+				</button>
+				<div class="dropdown-menu" id="swapper-other1" aria-labelledby="dropdownMenu">
+					<button class="dropdown-item" type="button"><a href="/signupdriver">Sign Up</a></button>
+					<button class="dropdown-item" type="button"><a href="/logindriver">Login</a></button>
+					<!-- <button class="dropdown-item" type="button"><a href="/logout">Logout</a></button> -->
+					<button class="dropdown-item" type="button">Contact Us</button>
+				</div>
+			</div>
+			<button class="btn btn-white btn-outline-info"><a
+					href="javascript:SwapDivsWithClick('dropdownMenu1','dropdownMenu2')"> Switch Account
+					Type</a></button>
+		</div>
+	</nav>
+
+	<div>
+		<!-- <div class="jumbotron">
+		<h1 class="display-4">Welcome to ATLAS!</h1>
+		<!-- <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p> -->
+		<!-- <hr class="my-4"> -->
+		<!-- <p>It uses utility classes for typography and spacing to space content out within the larger container.</p> -->
+		<!-- <p class="lead">
+		  <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+		</p>
+	  </div> -->
+
+		<div class="container" style="padding-top:50px;">
+			<div class="jumbotron" id="jumbo">
+				<div class="inner">
+					<h1 class="whitney">A Title Here</h1>
+					<h3 class="gotham">A Sub Title Here</h3>
+					<p>Using bootstrap's jumbotron with the particle.js background to make the jumbotron
+						semi-transparent.</p>
+					<p><a class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
+				</div>
+			</div>
+		</div>
+
+		<!--  Carousel with images  -->
+
+		<div class="carousel-container">
+			<div id="demo" class="carousel slide" data-ride="carousel">
+				<ul class="carousel-indicators">
+					<li data-target="#demo" data-slide-to="0" class="active"></li>
+					<li data-target="#demo" data-slide-to="1"></li>
+					<li data-target="#demo" data-slide-to="2"></li>
+				</ul>
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<img src="images/pic1.jpeg" alt="API" width=" 60%" height="200">
+						<div class="carousel-caption">
+							<h3>ATLAS </h3>
+							<p>Can run API calls for you!</p>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<img src="images/supportsignup.jpeg" alt="SLA" width=" 60%" height="200">
+						<div class="carousel-caption">
+							<h3>ATLAS</h3>
+							<p>Can Track Client Deliverables for you!</p>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<img src="images/supportlogin.jpeg" alt="JSON" width=" 60%" height="200">
+						<div class="carousel-caption">
+							<h3>ATLAS</h3>
+							<p>Can convert your JSON to csv/xls</p>
+						</div>
+					</div>
+				</div>
+				<a class="carousel-control-prev" href="#demo" data-slide="prev">
+					<span class="carousel-control-prev-icon"></span>
+				</a>
+				<a class="carousel-control-next" href="#demo" data-slide="next">
+					<span class="carousel-control-next-icon"></span>
+				</a>
+			</div>
 		</div>
 	</div>
 
-		  <!-- <h1>Card Flip with Text</h1> -->
-<!-- <h3>Hover over the image below:</h3> -->
-<div class="card-container">
-<div class="flip-card" class = "col-sm-4" >
-  <div class="flip-card-inner">
-    <div class="flip-card-front">
-      <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
-    </div>
-    <div class="flip-card-back">
-      <h1>John Doe</h1> 
-      <p>Architect & Engineer</p> 
-      <p>We love that guy</p>
-    </div>
-  </div>
-</div>
-
-<!-- <h1>Card Flip with Text</h1> -->
-<!-- <h3>Hover over the image below:</h3> -->
-
-<div class="flip-card" class = "col-sm-4">
-	<class class ="col-sm-4"></class>
-  <div class="flip-card-inner">
-    <div class="flip-card-front">
-      <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
-    </div>
-    <div class="flip-card-back">
-      <h1>John Doe</h1> 
-      <p>Architect & Engineer</p> 
-      <p>We love that guy</p>
-    </div>
-  </div>
-</div>
-<!-- <h1>Card Flip with Text</h1> -->
-<!-- <h3>Hover over the image below:</h3> -->
 
 
-<div class="flip-card" class = "col-sm-4">
-	<class class ="col-sm-4"></class>
-  <div class="flip-card-inner">
-    <div class="flip-card-front">
-      <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
-    </div>
-    <div class="flip-card-back">
-      <h1>John Doe</h1> 
-      <p>Architect & Engineer</p> 
-      <p>We love that guy</p>
-    </div>
-  </div>
-</div>
-</div>
+	<!-- <h1>Card Flip with Text</h1> -->
+	<!-- <h3>Hover over the image below:</h3> -->
+	<div class="container mb-5" style="margin-bottom:100px;">
+		<div class="row">
+			<div class="flip-card col-sm-4">
+				<div class="flip-card-inner">
+					<div class="flip-card-front">
+						<img src="images/todo.jpeg" alt="" style="width:300px;height:300px;">
+					</div>
+					<div class="flip-card-back">
+						<h1>Standard Client Packages</h1>
+						<p>Link to Documentation</p>
+						<p>Track SLA's </p>
+					</div>
+				</div>
+			</div>
 
-	
-	<div class="footer mt-0 pt-0" style="background-color:#e3f2fd;">
+			<!-- <h1>Card Flip with Text</h1> -->
+			<!-- <h3>Hover over the image below:</h3> -->
+
+			<div class="flip-card col-sm-4">
+				<!-- <class class="col-sm-4"></class> -->
+				<div class="flip-card-inner">
+					<div class="flip-card-front">
+						<img src="img_avatar.png" alt="" style="width:300px;height:300px;">
+					</div>
+					<div class="flip-card-back">
+						<h1>Query Database</h1>
+						<p>Link to Documentation</p>
+						<p>Track SLA's </p>
+					</div>
+				</div>
+			</div>
+			<!-- <h1>Card Flip with Text</h1> -->
+			<!-- <h3>Hover over the image below:</h3> -->
+
+
+			<div class="flip-card col-sm-4">
+				<!-- <class class="col-sm-4"></class> -->
+				<div class="flip-card-inner">
+					<div class="flip-card-front">
+						<img src="img_avatar.png" alt="" style="width:300px;height:300px;">
+					</div>
+					<div class="flip-card-back">
+						<h1>Personal Tools</h1>
+						<p>Link to Documentation</p>
+						<p>Track SLA's </p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div class="footer mt-5 pt-1" style="background-color:#e3f2fd;">
 		<div class="container">
 			<div class="row">
-				<div class="col-6 col-sm-4 col-md-3 col-lg-2">
+				<div class="col-4 col-sm-4 col-md-4 col-lg-4">
 					<p>About</p>
 					<ul>
 						<li><a href="">How It's Works</a></li>
 						<li><a href="">Our Story</a></li>
 					</ul>
 				</div>
-				<div class="col-6 col-sm-4 col-md-3 col-lg-2">
+				<div class="col-4 col-sm-4 col-md-4 col-lg-4">
 					<p>Support</p>
 					<ul>
 						<li><a href="">FAQ</a></li>
 						<li><a href="/privacy">Privacy Policy</a></li>
 					</ul>
 				</div>
-				<div class="col-sm-4 col-md-3 col-lg-3 d-none d-sm-block">
+				<div class="col-4 col-sm-4 col-md-4 col-lg-4 d-none d-sm-block">
 					<p>Contact</p>
 					<ul>
 						<li><a href="">1-800-PRO-JECT</a></li>
@@ -298,26 +381,139 @@
 						</li>
 					</ul>
 				</div>
-				<div class="col-lg-2 d-none d-lg-flex flex-column justify-content-between">
-					<div class="row">
-						<div class="col"><img class="footer-logo">
-						</div>
-					</div>
-				</div>
 			</div>
 			<div class="text-center" id="copyright">
 				Copyright &copy 2021 BNY Mellon. All rights reserved
 			</div>
 		</div>
 	</div>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
-		</script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
-		</script>
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
 <script type="text/javascript" src="js/home.js"></script>
-​
+
+	<script>
+		var options = {
+			"particles": {
+				"number": {
+					"value": 99,
+					"density": {
+						"enable": true,
+						"value_area": 552.4033491425909
+					}
+				},
+				"color": {
+					"value": "#ffffff"
+				},
+				"shape": {
+					"type": "circle",
+					"stroke": {
+						"width": 0,
+						"color": "#000000"
+					},
+					"polygon": {
+						"nb_sides": 3
+					},
+					"image": {
+						"src": "img/github.svg",
+						"width": 70,
+						"height": 100
+					}
+				},
+				"opacity": {
+					"value": 1,
+					"random": true,
+					"anim": {
+						"enable": false,
+						"speed": 1,
+						"opacity_min": 0.1,
+						"sync": false
+					}
+				},
+				"size": {
+					"value": 2,
+					"random": true,
+					"anim": {
+						"enable": false,
+						"speed": 40,
+						"size_min": 0.1,
+						"sync": false
+					}
+				},
+				"line_linked": {
+					"enable": false,
+					"distance": 150,
+					"color": "#ffffff",
+					"opacity": 0.4,
+					"width": 1
+				},
+				"move": {
+					"enable": true,
+					"speed": 1.5782952832645452,
+					"direction": "none",
+					"random": true,
+					"straight": false,
+					"out_mode": "out",
+					"bounce": false,
+					"attract": {
+						"enable": false,
+						"rotateX": 600,
+						"rotateY": 1200
+					}
+				}
+			},
+			"interactivity": {
+				"detect_on": "canvas",
+				"events": {
+					"onhover": {
+						"enable": false,
+						"mode": "repulse"
+					},
+					"onclick": {
+						"enable": true,
+						"mode": "repulse"
+					},
+					"resize": true
+				},
+				"modes": {
+					"grab": {
+						"distance": 400,
+						"line_linked": {
+							"opacity": 1
+						}
+					},
+					"bubble": {
+						"distance": 400,
+						"size": 40,
+						"duration": 2,
+						"opacity": 8,
+						"speed": 3
+					},
+					"repulse": {
+						"distance": 200,
+						"duration": 0.4
+					},
+					"push": {
+						"particles_nb": 4
+					},
+					"remove": {
+						"particles_nb": 2
+					}
+				}
+			},
+			"retina_detect": false
+		};
+		particlesJS("particle", options);
+	</script>
+
+	​
+	
+
 </body>
 ​
-</html>
 
+</html>
