@@ -41,3 +41,21 @@ require("./routes/api-routes.js")(app);
   app.listen(PORT, function () {
     console.log("==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.", PORT, PORT);
   });
+
+// To create MySQL database connection 
+
+var mysql = require("mysql");
+
+var connection = mysql.createConnection({
+    host:"localhost",
+    port:"3306",
+    user:"root",
+    password:"rootpass",
+    database:"ice_creamDB"
+});
+
+connection.connect(function(err){
+    if(err){throw err};
+
+    console.log("Connected successfully " + connection.threadId);
+});
