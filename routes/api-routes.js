@@ -66,55 +66,8 @@ module.exports = function(app) {
         res.status(401).json(err);
       });
   });
-  ///inserting information of pharmacy
-  app.post("/api/pharmacy", function(req, res) {
-    db.Pharmacy.create({
-      name: req.body.name,
-      street: req.body.street,
-      city: req.body.city,
-      state: req.body.state_abbr,
-      zipcode: req.body.zipcode,
-      phone: req.body.phone,
-    }).then(function(dbPharma) {
-      res.send(dbPharma);
-    });
-  });
-  //route for driver
-  app.post("/api/driver", function(req, res) {
-    db.Driver.create({
-      email: req.body.email,
-      password: req.body.password,
-      fname: req.body.fname,
-      lname: req.body.lname,
-      street: req.body.street,
-      city: req.body.city,
-      state: req.body.state,
-      zipcode: req.body.zipcode,
-      phone: req.body.phone,
-      vehicle_plate: req.body.vehicle_plate,
-      driver_license: req.body.driver_license,
-    }).then(function(dbDriver) {
-      res.send(dbDriver);
-    });
-  });
-  //route for order
-
-  app.post("/api/order", function(req, res) {
-    db.Order.create({
-    //  order_id: req.body.order_id,
-      med_id: req.body.med_id,
-      med_name: req.body.med_name,
-      category: req.body.category,
-      quantity: req.body.quantity,
-      med_price: req.body.med_price,
-      status: req.body.status,
-      CustomerId: req.body.CustomerId,
-      DriverId: req.body.DriverId,
-      PharmacyId: req.body.PharmacyId,
-    }).then(function(dbPharma) {
-      res.send(dbPharma);
-    });
-  });
+ 
+ 
 
    // Shivani's code - used by orderstatus.html
   app.get("/api/order/getstatus", function(req, res) {

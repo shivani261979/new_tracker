@@ -29,12 +29,6 @@ module.exports = function (sequelize, DataTypes) {
                 min: 1
             }
         },
-        street: DataTypes.STRING,
-        city: DataTypes.STRING,
-        state: DataTypes.STRING,
-        zipcode: DataTypes.STRING,
-        phone: DataTypes.STRING,
-        
     }, {
       
         // freezeTableName: true,
@@ -43,18 +37,6 @@ module.exports = function (sequelize, DataTypes) {
     Operations.prototype.validPassword = function (password) {
         return bcrypt.compareSync(password, this.password);
     };
-    // Hooks are automatic methods that run during various phases of the User Model lifecycle
-    // In this case, before a User is created, we will automatically hash their password
-    Operations.addHook("beforeCreate", function (user) {
-        user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(10), null);
-    });
    
-    Operations.associate = function (models) {
-        Operations.hasMany(models.Order, {
-            onDelete: "cascade"
-
-    });
-  
-};
     return Operations;
 };
