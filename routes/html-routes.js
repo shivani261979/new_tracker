@@ -6,12 +6,12 @@ var isAuthenticated = require("../config/middleware/isAuthenticated");
 
 module.exports = function (app) {
   app.get("/", function (req, res) {
-    res.sendFile(path.join(__dirname, "../public/home.html"));
+    res.sendFile(path.join(__dirname, "../public/frontFiles/home.html"));
   });
 
   app.get("/signup", function (req, res) {
     if (req.user) {
-      res.redirect("/order");
+      res.redirect("/");
     }
     res.sendFile(path.join(__dirname, "../public/supportSignup.html"));
   });

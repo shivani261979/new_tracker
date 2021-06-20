@@ -79,6 +79,15 @@
 			box-shadow: 0 0 20px rgba(58, 23, 255, 0.8);
 		}
 
+		.card {
+			/* transform: rotateY(180deg); */
+			/* transform: scale(1.05); */
+			-webkit-box-shadow: 0 0 20px rgba(58, 23, 255, 0.8);
+			box-shadow: 0 0 20px rgba(58, 23, 255, 0.8);
+		}
+
+
+
 		.flip-card-front,
 		.flip-card-back {
 			position: absolute;
@@ -128,6 +137,25 @@
 
 		}
 
+		.jumbotron1 {
+			padding-top: 20%;
+			padding: 4em;
+			max-width: 400;
+			max-height: 400;
+			opacity: 0.7;
+
+		}
+
+		.jumbotron2 {
+
+			padding-top: 20%;
+			max-width: 400;
+			max-height: 400;
+			opacity: 0.7;
+			background-color: thistle;
+
+		}
+
 		#jumbo {
 			text-align: center;
 
@@ -141,7 +169,7 @@
 		.glow {
 			font-size: 60px;
 			color: #fff;
-			text-align: center;
+			text-align: left;
 			-webkit-animation: glow 1s ease-in-out infinite alternate;
 			-moz-animation: glow 1s ease-in-out infinite alternate;
 			animation: glow 1s ease-in-out infinite alternate;
@@ -176,13 +204,44 @@
 			padding: 50px;
 		}
 
+		#jumbo1 {
+			background: whitesmoke;
+			color: rgba(255, 255, 255);
+			position: relative;
+			padding: 50px;
+		}
+
+		#jumbo2 {
+			background: whitesmoke;
+			color: rgb(60, 61, 105);
+			position: relative;
+			padding: 50px;
+			text-decoration-color: teal;
+		}
+
 		.inner {
-			color: rgb(250, 250, 250);
+			color: black;
 			opacity: 1;
+		}
+
+		#containerbody {
+
+			padding-top: 4em;
 		}
 
 		body {
 			padding-top: 5px;
+		}
+
+		@import url(https://fonts.googleapis.com/css?family=Roboto:400,300);
+
+		body {
+			background: #eeeeee;
+			font-family: 'Roboto', sans-serif;
+		}
+
+		* {
+			box-sizing: border-box;
 		}
 	</style>
 
@@ -237,7 +296,6 @@
 			<div class="jumbotron" id="jumbo">
 				<div class="inner">
 					<h2 class="whitney">Welcome to ATLAS!</h2>
-					<!-- <h3 class="gotham">A Sub Title Here</h3> -->
 					<p>Empowering Tracking with our Smart Tools.</p>
 					<p><a class="btn btn-primary btn-lg" role="button" href="./supportSignup.html"> Get Started!</a></p>
 				</div>
@@ -286,56 +344,146 @@
 		</div>
 	</div>
 
-
-
-	<!-- <h1>Card Flip with Text</h1> -->
-	<!-- <h3>Hover over the image below:</h3> -->
-	<div class="container mb-5" style="margin-bottom:100px;">
-		<div class="row">
-			<div class="flip-card col-sm-4">
-				<div class="flip-card-inner">
-					<div class="flip-card-front">
-						<img src="images/todo.jpeg" alt="" style="width:300px;height:300px;">
+	<!-- <div class="container" style="padding-top:50px;"> -->
+	<div class="jumbotron1" id="jumbo1">
+		<div class="inner">
+			<div class="row mt-5" style="text-align: center;">
+				<div class="col">
+				</div>
+				<div class="col-8">
+					<h2> Try these shortcuts without logging to your dashboard! </h2>
+					<p class="lead mt-3">Get live tracking with the simple click of a button</p>
+					<!-- Progress Bar -->
+					<div class="progress">
+						<div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+							aria-valuenow="75" aria-valuemin="0" aria-valuemax="80" style="width: 75%">
+						</div>
 					</div>
-					<div class="flip-card-back">
-						<h1>Standard Client Packages</h1>
-						<p>Link to Documentation</p>
-						<p>Track SLA's </p>
-					</div>
+				</div>
+				<div class="col">
 				</div>
 			</div>
 
 			<!-- <h1>Card Flip with Text</h1> -->
 			<!-- <h3>Hover over the image below:</h3> -->
-
-			<div class="flip-card col-sm-4">
-				<!-- <class class="col-sm-4"></class> -->
-				<div class="flip-card-inner">
-					<div class="flip-card-front">
-						<img src="images/todo.jpeg" alt="Query Database" style="width:300px;height:300px;">
-						
+			<div class="container mb-5" style="margin-top:30px;">
+				<div class="row">
+					<div class="flip-card col-sm-4">
+						<div class="flip-card-inner">
+							<div class="flip-card-front">
+								<img src="../images/tech2.jpeg" alt="" style="width:300px;height:300px;">
+							</div>
+							<div class="flip-card-back">
+								<h1>Standard Client Packages</h1>
+								<p>Link to Documentation</p>
+								<p>Track SLA's </p>
+							</div>
+						</div>
 					</div>
-					<div class="flip-card-back">
-						<h1>Query Database</h1>
-						<p>Link to Documentation</p>
-						<p>Track SLA's </p>
+
+					<!-- <h1>Card Flip with Text</h1> -->
+					<!-- <h3>Hover over the image below:</h3> -->
+
+					<div class="flip-card col-sm-4">
+						<!-- <class class="col-sm-4"></class> -->
+						<div class="flip-card-inner">
+							<div class="flip-card-front">
+								<img src="../images/db.png" alt="Query Database" style="width:300px;height:300px;">
+
+							</div>
+							<div class="flip-card-back">
+								<h1>Query Database</h1>
+								<p>Link to Documentation</p>
+								<p>Track SLA's </p>
+							</div>
+						</div>
+					</div>
+					<!-- <h1>Card Flip with Text</h1> -->
+					<!-- <h3>Hover over the image below:</h3> -->
+
+
+					<div class="flip-card col-sm-4">
+						<!-- <class class="col-sm-4"></class> -->
+						<div class="flip-card-inner">
+							<div class="flip-card-front">
+								<img src="../images/OperationsLoginBack.jpg" alt="" style="width:300px;height:300px;">
+							</div>
+							<div class="flip-card-back">
+								<h1>Personal Tools</h1>
+								<p>Link to Documentation</p>
+								<p>Track SLA's </p>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
-			<!-- <h1>Card Flip with Text</h1> -->
-			<!-- <h3>Hover over the image below:</h3> -->
-
-
-			<div class="flip-card col-sm-4">
-				<!-- <class class="col-sm-4"></class> -->
-				<div class="flip-card-inner">
-					<div class="flip-card-front">
-						<img src="images/todo.jpeg" alt="" style="width:300px;height:300px;">
+		</div>
+	</div>
+	</div>
+	<!-- 	
+	<div class="container" style="padding-top:50px;">
+		<h1>Informational Section</h1>
+	<div class="card level-3">
+		<h5>Floating Card</h5>
+	</div>
+</div> -->
+	<div class="container">
+		<div class="container" style="padding-top:50px;">
+			<div class="jumbotron2" id="jumbo2">
+				<div class="inner">
+					<div id="containerBody">
+						<!-- <div class="container"> -->
+						<div class="row mt-5" style="text-align: center;">
+							<div class="col">
+							</div>
+							<div class="col-8">
+								<h2>ATLAS provides you with tools to make your day better! </h2>
+								<!-- <p class="lead mt-3"> Information Only!</p> -->
+								<!-- Progress Bar -->
+								<!-- <div class="progress">
+					<div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+						aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%">
 					</div>
-					<div class="flip-card-back">
-						<h1>Personal Tools</h1>
-						<p>Link to Documentation</p>
-						<p>Track SLA's </p>
+				</div> -->
+							</div>
+							<div class="col">
+							</div>
+						</div>
+						<div class="row mt-5 pt-4 pb-4" style="text-align: center;">
+							<div class="col">
+								<div class="card">
+									<img src="../images/tech1.jpeg" class="card-img-top" alt="...">
+									<div class="card-body">
+										<p class="card-text">List of Markers </p>
+									</div>
+								</div>
+							</div>
+							<div class="col">
+								<div class="card">
+									<img src="../images/sla2.jpeg" class="card-img-top" alt="...">
+									<div class="card-body">
+										<p class="card-text">Client SLA's</p>
+									</div>
+								</div>
+							</div>
+							<div class="col">
+								<div class="card">
+									<img src="../images/tech2.jpeg" class="card-img-top" height="" alt="...">
+									<div class="card-body">
+										<p class="card-text">About Data </p>
+									</div>
+								</div>
+							</div>
+
+							<div class="col">
+								<div class="card">
+									<img src="../images/back2.jpeg" class="card-img-top" height="" alt="...">
+									<div class="card-body">
+										<p class="card-text">Security & Account Data</p>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
