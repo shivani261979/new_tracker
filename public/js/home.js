@@ -14,5 +14,5 @@ function SwapDivsWithClick(div1,div2)
    }
 }
 window.onload = function() {
-document.getElementById('dropdownMenu2').style.display = 'none';
+   document.getElementById('dropdownMenu2').style.display = 'none';
 };
