@@ -23,8 +23,8 @@ module.exports = function (app) {
     res.sendFile(path.join(__dirname, "../public/supportLogin.html"));
   });
 
-  // app.get("/neworder", isAuthenticated, function (req, res) {
-  //   res.sendFile(path.join(__dirname, "../public/customerNewOrder.html"));
+  // app.get("/getStarted", isAuthenticated, function (req, res) {
+  //   res.sendFile(path.join(__dirname, "../public/.html"));
   // });
 
     // Shivani's code - for serving orderstatus.html
