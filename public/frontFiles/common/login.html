@@ -9,12 +9,11 @@
   <meta name="Description" content="Enter your description here" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-  <link rel="stylesheet" href="../stylesheets/customerLogin.css">
-  <title>Login - Support| ATLAS </title>
+  <link rel="stylesheet" href="../stylesheets/opsLogin.css">
+  <title>Login - Operations | ATLAS</title>
 
 <style>
-
-.glow {
+  .glow {
   font-size: 60px;
   color: #fff;
   text-align: center;
@@ -34,16 +33,12 @@
 
 body {
   font-family: 'Noto Sans SC', sans-serif;
-  background-image: url("images/opssignin.jpeg");
+  /* background-color: rgba(255,255,255,0.1);
+background-blend-mode: lighten; */
+  background-image: url(/public/images/todo.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
-  opacity: 0.90;
 }
-
-body {
-  font-family: "Lato", sans-serif;
-}
-
 
 </style>
 
@@ -56,20 +51,17 @@ body {
       <h1 class = "glow">ADU ATLAS</h1></a>
     </h2>
     <div class="btn-group dropleft">
-     <button class="btn btn-white dropdown-toggle" type="button" id="dropdownMenu" data-toggle="dropdown"
+      <button class="btn btn-white dropdown-toggle" type="button" id="dropdownMenu" data-toggle="dropdown"
         aria-haspopup="true" aria-expanded="false">
-        Support
+        Navigate to?
       </button>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenu">
-        <button class="dropdown-item" type="button"><a href="/">Home</a></button>
-        <button class="dropdown-item" type="button"><a href="/signupdriver">My Dashboard</a></button>
-      	<button class="dropdown-item" type="button"><a href="/signup">Sign Up</a></button>
-        <button class="dropdown-item" type="button">Contact Us</button>
-				<button class="dropdown-item" type="button"><a href="/logout">Logout</a></button>
-      </div>
+      <div class="dropdown-menu" id="swapper-other1" aria-labelledby="dropdownMenu">
+        <button class="dropdown-item" type="button"><a href="../public/frontFiles/home.html">Home</a></button>
+        <button class="dropdown-item" type="button"><a href="../public/frontFiles/common/contact.html"></a>Contact Us</button>
+			</div>
     </div>
   </nav>
-  <div class="container mt-5">
+  <div class="container">
     <div class="row">
       <div class="col-md-12 col-md-offset-3">
         <h2>Login Form</h2>
@@ -86,14 +78,14 @@ body {
           <button type="submit" class="btn btn-primary">Login</button>
         </form>
         <br />
-        <p><a href="/signup"> Or sign up here</a></p>
+        <p><a href="/public/opsSignup.html">Or sign up here</a></p>
       </div>
     </div>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="js/customerLogin.js"></script>
+  <script type="text/javascript" src="js/driverLogin.js"></script>
 </body>
 
 </html>
